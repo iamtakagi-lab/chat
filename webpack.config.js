@@ -1,8 +1,6 @@
 const path = require("path")
 const isProduction = process.env.NODE_ENV === "production"
 
-const Dotenv = require('dotenv-webpack');
-
 /** @type {import("webpack").Configuration} */
 const config = {
     mode: isProduction ? "production" : "development",
@@ -36,9 +34,6 @@ const config = {
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
     },
-    plugins: [
-        new Dotenv()
-    ],
     devtool: "source-map",
     devServer: {
         publicPath: "/assets/",
