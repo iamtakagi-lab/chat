@@ -19,7 +19,7 @@ const Chat: React.FC<{}> = () => {
                 nickname: nickname.length ? nickname : "名無しさん", text
             }).then(({ data, error, status }) => {
                 if (error || !data) return addToast(`チャット送信失敗`, { appearance: 'error', autoDismiss: true })
-　　　　　　　　　 setText("")
+                setText("")
                 addToast(`チャット送信完了`, { appearance: 'success', autoDismiss: true })
             })
         }
@@ -128,19 +128,24 @@ const Messages: React.FC<{}> = ({ }) => {
 export const App: React.FC<{}> = ({ }) => {
     return (
         <ToastProvider>
-            <main className="container md:w-1/3 py-32" >
-                <a href="/">
-                    <div className="text-center my-3 text-lg cursor-pointer">
-                        chat
+            <main className="container md:w-1/3 py-5" >
+                <section className="text-center mb-5">
+                    <a href="/">
+                        <div className="my-3 text-lg cursor-pointer">
+                            chat
+                        </div>
+                    </a>
+                    <div className="text-center my-3 text-md">
+                        チャットするやつ
                     </div>
-                </a>
-                <div className="text-center my-3 text-md">
-                    チャットするやつ
-                </div>
+                    <a href="https://github.com/iamtakagi/chat" className="text-sm cursor-pointer border-b hover:border-purple-800 text-purple-800 border-transparent">
+                        https://github.com/iamtakagi/chat
+                    </a>
+                </section>
                 <section>
                     <Chat />
                 </section>
-                <section>
+                <section className="mt-5">
                     <Messages />
                 </section>
             </main>
