@@ -83,7 +83,6 @@ const Messages: React.FC<{}> = ({ }) => {
                     }
                     return addToast(`チャット取得失敗`, { appearance: 'error', autoDismiss: true })
                 }
-                console.log(data)
                 setMessages(data)
             })
         }
