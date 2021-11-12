@@ -1,0 +1,13 @@
+node_modules
+
+.next
+
+yarn-error.log
+
+yarn.lock
+
+.DS_Store
+
+.env
+
+assets
