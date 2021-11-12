@@ -19,6 +19,7 @@ const Chat: React.FC<{}> = () => {
                 nickname: nickname.length ? nickname : "名無しさん", text
             }).then(({ data, error, status }) => {
                 if (error || !data) return addToast(`チャット送信失敗`, { appearance: 'error', autoDismiss: true })
+　　　　　　　　　 setText("")
                 addToast(`チャット送信完了`, { appearance: 'success', autoDismiss: true })
             })
         }
