@@ -75,7 +75,7 @@ const Messages: React.FC<{}> = ({ }) => {
 
     const getInitialMessages = () => {
         if (!messages.length) {
-            db.from<Message>('messages').select('*').order("id", { ascending: false }).then(({ data, status, error }) => {
+            db.from<Message>('messages').select('*').limit(50).order("id", { ascending: false }).then(({ data, status, error }) => {
                 if (error || !data) {
                     if (subscription) {
                         db.removeSubscription(subscription);
