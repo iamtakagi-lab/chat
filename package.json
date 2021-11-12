@@ -12,7 +12,6 @@
     "@types/webpack-dev-server": "^4.3.1",
     "autoprefixer": "^10.3.1",
     "css-loader": "^6.5.1",
-    "dotenv-webpack": "^7.0.3",
     "postcss": "^8.3.6",
     "postcss-loader": "^6.2.0",
     "prop-types": "^15.7.2",
